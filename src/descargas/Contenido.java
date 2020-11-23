@@ -6,11 +6,14 @@ public class Contenido {
 	private String titulo;
 
 	public Contenido() {
+		super();
 	}
-	
+
 	public Contenido(String id, String titulo) {
+		super();
 		this.id = id;
 		this.titulo = titulo;
 	}
 	
+
 }
