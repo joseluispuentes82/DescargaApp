@@ -1,10 +1,18 @@
 package descargas;
 
-public class Contenido {
+public abstract class Contenido {
 
-	private String id;
+	private static String id;
 	private String titulo;
 
+	public String getTitulo() {
+		String resultado = titulo;
+		if (titulo == null) {
+			resultado= "No se dispone del título";
+		}
+		return resultado;
+	}
+	
 	public Contenido() {
 		super();
 	}

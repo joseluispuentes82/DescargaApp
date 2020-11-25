@@ -1,6 +1,6 @@
 package descargas;
 
-public class Pelicula extends Multimedia {
+public class Pelicula extends Contenido {
 	Director director;
 	Actor[] actoresPrincipales;
 	public Pelicula() {
@@ -11,11 +11,7 @@ public class Pelicula extends Multimedia {
 		super(id, titulo);
 
 	}
-	@Override
-	public TipoArchivo getTipoArchivo() {
 
-		return null;
-	}
 	
 
 }

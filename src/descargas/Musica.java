@@ -1,6 +1,6 @@
 package descargas;
 
-public class Musica extends Multimedia {
+public class Musica extends Contenido {
 	Artista artista;
 
 	public Musica() {
@@ -13,12 +13,6 @@ public class Musica extends Multimedia {
 		
 	}
 
-	@Override
-	public TipoArchivo getTipoArchivo() {
-
-		return null;
-	}
-	
 
 	
 }
