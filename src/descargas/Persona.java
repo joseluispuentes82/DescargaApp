@@ -1,7 +1,5 @@
 package descargas;
 
-import java.security.PublicKey;
-
 public abstract class Persona {
 
 	String nombre;
