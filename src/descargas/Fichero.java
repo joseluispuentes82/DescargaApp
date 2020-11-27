@@ -1,6 +1,6 @@
 package descargas;
 
-public class Fichero {
+public class Fichero implements Identificable {
 	private String id;
 	private String ruta;
 	private Contenido contenido;
@@ -14,7 +14,12 @@ public class Fichero {
 		super();
 		this.id = id;
 		this.ruta = ruta;
-		this.contenido = musica;
+		this.contenido = contenido;
 		this.tamano = tamano;
+	}
+
+	@Override
+	public String getId() {
+		return id;
 	}
 }

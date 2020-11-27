@@ -6,12 +6,23 @@ public class DescargaApp {
 		Contenido cancion1 = new Musica("1", "tituloA");
 		Contenido cancion2 = new Musica("2", "tituloB");
 		Contenido pelicula1 = new Pelicula("3", "tituloC");
+		Contenido pelicula2 = new Pelicula("4", "tituloD");
+
 		Fichero[] listaDescargas = {
 				new Fichero("id1", null, cancion1, 15.2f),
-				new Fichero("id2", null, cancion2, 14.5f)
+				new Fichero("id2", null, cancion2, 14.5f),
+				new Fichero("id3", null, pelicula1, 104.5f),
+				new Fichero("id4", null, pelicula2, 95.5f),
+
 		};
 		Conexion conexion = new Conexion(5f, "Movistar");
 		System.out.println("Tiempo estimado: " + Utils.getTiempo(listaDescargas, conexion));
+		
+		Identificable[] identificables = {listaDescargas[0], cancion2, pelicula1, pelicula2};
+		for (Identificable identificable : identificables) {
+			System.out.println(identificable.getId());
+			
+		}
 	}
 	
 }
