@@ -1,8 +1,12 @@
 package descargas;
 
+import java.util.ArrayList;
+
+import java.util.Collection;
+
 public class Pelicula extends Contenido {
 	Director director;
-	Actor[] actoresPrincipales;
+	Collection<Actor> actoresPrincipales = new ArrayList<Actor>();
 	public Pelicula() {
 		super();
 

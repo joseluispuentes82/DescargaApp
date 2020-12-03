@@ -1,12 +1,12 @@
 package descargas;
 
-public class Fichero implements Identificable {
+public class Fichero implements Identificable, Comparable<Fichero> {
 	private String id;
 	private String ruta;
 	private Contenido contenido;
-	private float tamano; //Tamaño en MB
+	private double tamano; //Tamaño en MB
 	
-	public float getTamano() {
+	public double getTamano() {
 		return tamano;
 	}
 	
@@ -22,4 +22,16 @@ public class Fichero implements Identificable {
 	public String getId() {
 		return id;
 	}
+
+	@Override
+	public int compareTo(Fichero otroFichero) {
+		return getId().compareTo(otroFichero.getId());
+	}
+
+	@Override
+	public String toString() {
+		return "Fichero [id=" + id + "]";
+	}
+	
 }
+
