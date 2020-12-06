@@ -1,6 +1,8 @@
 package descargas;
 
-public class Fichero implements Identificable, Comparable<Fichero> {
+import java.util.Comparator;
+
+public class Fichero implements Identificable, Descargable, ConRuta {
 	private String id;
 	private String ruta;
 	private Contenido contenido;
@@ -10,7 +12,7 @@ public class Fichero implements Identificable, Comparable<Fichero> {
 		return tamano;
 	}
 	
-	public Fichero(String id, String ruta, Contenido musica, float tamano) {
+	public Fichero(String id, String ruta, Contenido contenido, double tamano) {
 		super();
 		this.id = id;
 		this.ruta = ruta;
@@ -19,19 +21,26 @@ public class Fichero implements Identificable, Comparable<Fichero> {
 	}
 
 	@Override
+	public String getRuta() {
+		return ruta;
+	}
+
+	@Override
 	public String getId() {
 		return id;
 	}
 
 	@Override
-	public int compareTo(Fichero otroFichero) {
-		return getId().compareTo(otroFichero.getId());
+	public String toString() {
+		return String.format("Fichero %s    Ruta: %s", getId(),getRuta());
 	}
 
+
 	@Override
-	public String toString() {
-		return "Fichero [id=" + id + "]";
+	public Contenido getContenido() {
+		return contenido;
 	}
-	
+
+
 }
 

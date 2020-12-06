@@ -1,6 +1,6 @@
 package descargas;
 
-public abstract class Persona {
+public abstract class Persona implements Nombrable {
 
 	String nombre;
 

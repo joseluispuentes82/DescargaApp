@@ -1,6 +1,6 @@
 package descargas;
 
-public abstract class Contenido implements Identificable, Nombrable {
+public abstract class Contenido implements Identificable, ConTitulo {
 
 	private String id;
 	private String titulo;

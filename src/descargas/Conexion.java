@@ -1,7 +1,7 @@
 package descargas;
 
-public interface Conexion {
+public interface Conexion extends Nombrable {
 	
-	public float getVelocidadDescarga();
+	double getVelocidadDescarga();
 		
 }
