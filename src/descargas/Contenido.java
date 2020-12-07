@@ -28,6 +28,11 @@ public abstract class Contenido implements Identificable, ConTitulo {
 		this.id = id;
 		this.titulo = titulo;
 	}
+
+	@Override
+	public String toString() {
+		return getId() + " - " + getTitulo();
+	}
 	
 
 }
